@@ -1,2 +1,2 @@
 # progressbar
-Dependency For QB-Core
+Dependency For X-Core

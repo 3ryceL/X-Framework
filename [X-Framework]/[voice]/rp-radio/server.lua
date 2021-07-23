@@ -6,7 +6,7 @@ QBCore.Functions.CreateUseableItem('radio', function(source)
 	TriggerClientEvent('Radio.Toggle', source)
 end)
 
-QBCore.Functions.CreateCallback('qb-radio:server:GetItem', function(source, cb, item)
+QBCore.Functions.CreateCallback('x-radio:server:GetItem', function(source, cb, item)
   local src = source
   local Player = QBCore.Functions.GetPlayer(src)
   if Player ~= nil then 
