@@ -1,8 +1,8 @@
-QBCore = nil
+XCore = nil
 
 Citizen.CreateThread(function() 
-    while QBCore == nil do
-        TriggerEvent("QBCore:GetObject", function(obj) QBCore = obj end)    
+    while XCore == nil do
+        TriggerEvent("XCore:GetObject", function(obj) XCore = obj end)    
         Citizen.Wait(200)
     end
 end)
@@ -81,7 +81,7 @@ Citizen.CreateThread(function()
 
 		if pumpDistance < 2.5 then
 			isNearPump = pumpObject
-			currentCash = QBCore.Functions.GetPlayerData().money['cash']
+			currentCash = XCore.Functions.GetPlayerData().money['cash']
 		else
 			isNearPump = false
 
@@ -227,8 +227,8 @@ Citizen.CreateThread(function()
 							DrawText3Ds(stringCoords.x, stringCoords.y, stringCoords.z + 1.2, Config.Strings.PurchaseJerryCan)
 
 							if IsControlJustReleased(0, 38) then
-								TriggerServerEvent('QBCore:Server:AddItem', "weapon_petrolcan", 1)
-								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["weapon_petrolcan"], "add")
+								TriggerServerEvent('XCore:Server:AddItem', "weapon_petrolcan", 1)
+								TriggerEvent("inventory:client:ItemBox", XCore.Shared.Items["weapon_petrolcan"], "add")
 								TriggerServerEvent('fuel:pay', Config.JerryCanCost, GetPlayerServerId(PlayerId()))
 							end
 						else

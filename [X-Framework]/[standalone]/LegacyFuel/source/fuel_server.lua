@@ -1,10 +1,10 @@
-QBCore = nil
+XCore = nil
 
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
+TriggerEvent('XCore:GetObject', function(obj) XCore = obj end)
 
 RegisterServerEvent('fuel:pay')
 AddEventHandler('fuel:pay', function(price, source)
-	local xPlayer = QBCore.Functions.GetPlayer(source)
+	local xPlayer = XCore.Functions.GetPlayer(source)
 	local amount = math.floor(price + 0.5)
 
 	if price > 0 then

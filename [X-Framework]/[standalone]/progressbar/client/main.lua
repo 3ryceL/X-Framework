@@ -1,8 +1,8 @@
-QBCore = nil
+XCore = nil
 
 Citizen.CreateThread(function() 
-    while QBCore == nil do
-    	TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
+    while XCore == nil do
+    	TriggerEvent('XCore:GetObject', function(obj) XCore = obj end)
     	Citizen.Wait(200)
     end
 end)
@@ -110,10 +110,10 @@ function Process(action, start, tick, finish)
                 end
             end)
         else
-            QBCore.Functions.Notify("You are already doing something!", "error")
+            XCore.Functions.Notify("You are already doing something!", "error")
         end
     else
-        QBCore.Functions.Notify("Cant do that action!", "error")
+        XCore.Functions.Notify("Cant do that action!", "error")
     end
 end
 

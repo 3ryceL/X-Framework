@@ -3,7 +3,7 @@ Config.DynamicWeather   = true -- Set this to false if you don't want the weathe
 
 -- On server start
 Config.StartWeather     = 'EXTRASUNNY' -- Default weather                       default: 'EXTRASUNNY'
-Config.BaseTime         = 8 -- Time                                             default: 8
+Config.BaseTime         = 14 -- Time                                             default: 8
 Config.TimeOffset       = 0 -- Time offset                                      default: 0
 Config.FreezeTime       = false -- freeze time                                  default: false
 Config.Blackout         = false -- Set blackout                                 default: false
