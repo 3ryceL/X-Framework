@@ -1,6 +1,6 @@
 XConfig = {}
 
-XConfig.MaxPlayers = GetConvarInt('sv_maxclients', 64) -- Gets max players from config file, default 32
+XConfig.MaxPlayers = GetConvarInt('sv_maxclients', 4) -- Gets max players from config file, default 32
 XConfig.DefaultSpawn = vector4(-1035.71, -2731.87, 12.86, 0.0)
 
 XConfig.Money = {}
@@ -23,7 +23,7 @@ XConfig.Player.Bloodtypes = {
 }
 
 XConfig.Server = {} -- General server config
-XConfig.Server.closed = false -- Set server closed (no one can join except people with ace permission 'qbadmin.join')
+XConfig.Server.closed = true -- Set server closed (no one can join except people with ace permission 'qbadmin.join')
 XConfig.Server.closedReason = "Server Closed" -- Reason message to display when people can't join the server
 XConfig.Server.uptime = 0 -- Time the server has been up.
 XConfig.Server.whitelist = false -- Enable or disable whitelist on the server
